@@ -1,0 +1,126 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 18;
+            if (a < 0)
+            {
+                WriteLine($"O número {a} é negativo");
+            }
+            else if (a > 0 && a < 10)
+            {
+                WriteLine($"o número {a} esta entre 0 - 10!");
+            }
+            else
+            {
+                WriteLine($"o número {a} maior que 10!");
+            }
+            ReadKey();
+        } 
+        
+    }
+}
+
+---------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string mes = "";
+            WriteLine("Digite o mês:");
+            mes = ReadLine();
+            switch (mes)
+            {
+                case "Janeiro":
+                case "Março":
+                case "Maio":
+                case "Junho":
+                case "Julho":
+                case "Agosto":
+                case "Outubro":
+                case "Setembro":
+                case "Dezembro":
+                    WriteLine("O mês de {0} tem 31 dias.", mes);
+                    break;
+                case "Fevereiro":
+                    WriteLine("O mês de {0} tem 28 ou 29 dias", mes);
+                    break;
+                default:
+                    WriteLine("O mês de {0} tem 30 dias", mes);
+                    break;
+            }
+            ReadKey();
+
+        }
+    }
+}
+
+------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char op;
+            float num1, num2, resultado;
+            WriteLine("Digite o primeiro número: ");
+            num1 = Convert.ToSingle(ReadLine());
+            WriteLine("Digite o segundo número: ");
+            num2 = Convert.ToSingle(ReadLine());
+            WriteLine("Digite a operção (+,-,*,/): ");
+            op = Convert.ToChar(ReadLine());
+            switch (op)
+            {
+                case '+':
+                    resultado = num1 + num2;
+                    WriteLine("{0} + {1} = {2}", num1, num2, resultado);
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    WriteLine("{0} - {1} = {2}", num1, num2, resultado);
+                    break;
+                case '*':
+                    resultado = num1 * num2;
+                    WriteLine("{0} * {1} = {2}", num1, num2, resultado);
+                    break;
+                case '/':
+                    resultado = num1 / num2;
+                    WriteLine("{0} / {1} = {2}", num1, num2, resultado);
+                    break;
+            }ReadKey();
+                
+        }
+    }
+}
+-------------------------------------------------------------------------------
+
